@@ -11,10 +11,15 @@ class Frog{ //commenting out toString method with cause sysout to return the cla
 	}
 	
 	public String toString(){
-		
-		return id + ": " + name;
+	
+		return String.format("%4d: %s", id, name);
+//		StringBuilder sb = new StringBuilder();
+//		sb.append(id).append(": ").append(name);
+//		
+//		return sb.toString(); //allows return of string from StringBuilder object sb
 	}
 	
+	//concatenating strings is creating new strings which uses more memory. Appending strings allows the extension of Strings without creating new String objects
 }
 
 //hashcodes are unique identifiers for objects
